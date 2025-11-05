@@ -1,9 +1,3 @@
-Claro, aqui está uma versão ajustada do `README.md`.
-
-Esta versão destaca que o projeto está em desenvolvimento e utiliza descrições mais genéricas para as funcionalidades futuras, focando no conceito e na tecnologia, sem expor a lógica de negócio ou ideias específicas que ainda não estão implementadas.
-
------
-
 # 🗺️ Rotas-Seguras
 
 Bem-vindo ao repositório do projeto **Rotas-Seguras**.
