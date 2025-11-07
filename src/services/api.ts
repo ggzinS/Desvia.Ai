@@ -1,4 +1,26 @@
+import axios from 'axios';
+import { API_KEY, API_BASE_URL } from '@env';
 import type { GeoJSON } from 'geojson';
+
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  timeout: 10000,
+});
+
+api.interceptors.request.use(
+  (config) => {
+    if (!config.headers) {
+      config.headers = {};
+    }
+
+    config.headers['X-API-Key'] = API_KEY;
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export default api;
 
 /**
  * Estrutura padrão de coordenadas geográficas compatível com `location.coords` do expo-location
