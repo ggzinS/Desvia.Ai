@@ -1,16 +1,19 @@
-module.exports = {
-  // O preset padrão do React Native
-  presets: ['module:metro-react-native-babel-preset'],
-  
-  // A configuração do 'react-native-dotenv'
-  plugins: [
-    [
-      'module:react-native-dotenv',
-      {
-        moduleName: '@env', // Este é o nome que usamos na importação
-        path: '.env',        // Aponta para o arquivo .env na raiz
-        allowUndefined: true, // Permite que o build não quebre se uma chave faltar
-      },
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    // 1. Use o preset padrão do Expo. Ele já inclui o 'metro-react-native-babel-preset'
+    presets: ['babel-preset-expo'],
+
+    // 2. Adicione o plugin 'react-native-dotenv' (para o Supabase)
+    plugins: [
+      [
+        'module:react-native-dotenv',
+        {
+          moduleName: '@env',
+          path: '.env',
+          allowUndefined: true,
+        },
+      ],
     ],
-  ],
+  };
 };
