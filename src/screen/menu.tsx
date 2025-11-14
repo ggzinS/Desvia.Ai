@@ -6,9 +6,8 @@ import { Ionicons } from "@expo/vector-icons";
 
 import styles from "../styles/menu";
 import Header from "../componentes/Header";
-import TabsNavigation from "../componentes/TabsNavegation";
 
-export default function Menu() {
+export default function MapScreen() {
   const [location, setLocation] = useState<Location.LocationObject | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -75,7 +74,7 @@ export default function Menu() {
         <Text style={styles.sosText}>SOS</Text>
       </TouchableOpacity>
 
-      <TabsNavigation />
+
     </View>
   );
 }

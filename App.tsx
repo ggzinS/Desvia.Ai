@@ -1,6 +1,8 @@
 import React from 'react';
-import Menu from './src/screen/menu';
+// Importe o seu navegador principal recém-criado
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
-  return <Menu />;
+  // Renderize apenas o AppNavigator
+  return <AppNavigator />;
 }
