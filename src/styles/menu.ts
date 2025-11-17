@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
@@ -8,12 +8,12 @@ export default StyleSheet.create({
     backgroundColor: "#f2f2f2",
   },
   map: {
-    width: width,
-    height: height,
+    width,
+    height,
   },
   mapMock: {
-    width: width,
-    height: height,
+    width,
+    height,
     backgroundColor: "#e0e0e0",
     justifyContent: "center",
     alignItems: "center",
@@ -25,9 +25,44 @@ export default StyleSheet.create({
     fontSize: 15,
     marginVertical: 5,
   },
+  suggestionList: {
+    position: "absolute",
+    top: 86,
+    left: 16,
+    right: 16,
+    zIndex: 20,
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    maxHeight: 220,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 12,
+  },
+  suggestionItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#f2f2f2",
+    gap: 6,
+  },
+  suggestionTitle: {
+    fontWeight: "700",
+    color: "#111",
+    fontSize: 14,
+  },
+  suggestionSubtitle: {
+    color: "#6b7280",
+    fontSize: 12,
+  },
+  statusBar: {
+    display: "none",
+  },
   sosButton: {
     position: "absolute",
-    bottom: 90,
+    bottom: 80,
     right: 20,
     backgroundColor: "#FF3B30",
     width: 70,
@@ -44,5 +79,162 @@ export default StyleSheet.create({
     color: "#fff",
     fontSize: 12,
     marginTop: 2,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.6)",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+  },
+  modalContent: {
+    width: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    padding: 16,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#111",
+  },
+  chipsContainer: {
+    flexDirection: "row",
+    marginTop: 10,
+    gap: 8,
+    flexWrap: "wrap",
+  },
+  chip: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 16,
+    backgroundColor: "#f3f4f6",
+  },
+  chipSelected: {
+    backgroundColor: "#f4511e",
+  },
+  chipText: {
+    color: "#444",
+    fontWeight: "500",
+  },
+  chipTextSelected: {
+    color: "#fff",
+    fontWeight: "700",
+  },
+  input: {
+    marginTop: 12,
+    minHeight: 60,
+    borderWidth: 1,
+    borderColor: "#e5e7eb",
+    borderRadius: 12,
+    padding: 10,
+    color: "#111",
+    textAlignVertical: "top",
+  },
+  modalActions: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 12,
+    marginTop: 14,
+  },
+  modalButton: {
+    backgroundColor: "#0E9F6E",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+  },
+  modalButtonText: {
+    color: "#fff",
+    fontWeight: "700",
+  },
+  modalButtonGhost: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#d1d5db",
+  },
+  modalButtonGhostText: {
+    color: "#111",
+    fontWeight: "600",
+  },
+  alertModal: {
+    width: "90%",
+    backgroundColor: "#b71c1c",
+    borderRadius: 16,
+    padding: 16,
+    alignItems: "center",
+    gap: 6,
+  },
+  alertTitle: {
+    color: "#fff",
+    fontWeight: "900",
+    fontSize: 18,
+  },
+  alertDescription: {
+    color: "#fff",
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  alertActions: {
+    flexDirection: "row",
+    gap: 12,
+    marginTop: 10,
+  },
+  userArrow: {
+    backgroundColor: "#fff",
+    borderRadius: 20,
+    padding: 6,
+    borderWidth: 1,
+    borderColor: "#0E9F6E",
+  },
+  feedContainer: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: 40,
+  },
+  feedHeaderBar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingBottom: 10,
+    borderBottomColor: "#e5e7eb",
+    borderBottomWidth: 1,
+  },
+  feedTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#111",
+  },
+  feedItem: {
+    backgroundColor: "#f9fafb",
+    borderRadius: 12,
+    padding: 12,
+    marginTop: 12,
+  },
+  feedHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    marginBottom: 4,
+  },
+  feedType: {
+    fontWeight: "700",
+    color: "#111",
+  },
+  feedDescription: {
+    color: "#374151",
+    marginTop: 4,
+  },
+  feedTimestamp: {
+    marginTop: 6,
+    color: "#6b7280",
+    fontSize: 12,
+  },
+  feedEmpty: {
+    marginTop: 30,
+    textAlign: "center",
+    color: "#6b7280",
   },
 });

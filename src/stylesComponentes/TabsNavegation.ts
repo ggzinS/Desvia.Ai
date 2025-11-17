@@ -3,11 +3,11 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     position: "absolute",
-    bottom: 0,
+    bottom: 12,
     left: 0,
     right: 0,
     backgroundColor: "#fff",
-    paddingVertical: 10,
+    paddingVertical: 12,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     flexDirection: "row",
@@ -17,6 +17,7 @@ export default StyleSheet.create({
     shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowRadius: 5,
+    paddingBottom: 12,
   },
   tabButton: {
     alignItems: "center",

@@ -25,6 +25,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "API_URL": "http://localhost:3333",
+      "API_KEY": "DEV_FORTALEZA_SEGURA"
     }
   }
 }
